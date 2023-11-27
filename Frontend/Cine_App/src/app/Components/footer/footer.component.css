@@ -1,0 +1,72 @@
+
+footer{
+ 
+    text-align: center;
+    color:black;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-top: auto;
+  }
+  footer li{
+    list-style: none;
+    margin: 5px;
+    display: inline-block;
+  }
+  .menu a{
+    color: black;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .menu a:hover{
+    color: rgb(77, 102, 127);
+    transition: 0.5s;
+  }
+  
+  .footer-copyright{
+    background-color:#52527a;
+    color:black;
+    padding: 12px;
+    margin-top: 7px;
+    text-transform: capitalize;
+  }
+  
+  .footer-copyright p{
+    margin-bottom: 0px;
+  }
+  .instagram-icon {
+    font-size: 24px;
+    color: #C13584;
+  }
+  .facebook-icon {
+    font-size: 24px;
+    color: #3b5998;
+  }
+  .linkedin-icon {
+    font-size: 24px;
+    color: #0077B5;
+  }
+  .github-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  .twitter-icon {
+    font-size: 24px;
+    color: #1DA1F2;
+  }
+  .youtube-icon {
+    font-size: 24px;
+    color: #FF0000;
+  }
+  .whatsapp-icon {
+    font-size: 24px;
+    color: #25D366;
+  }
+  .gmail-icon {
+    font-size: 24px;
+    color: #D44638;
+  }
+  .p{
+    display: flex;
+    
+  }

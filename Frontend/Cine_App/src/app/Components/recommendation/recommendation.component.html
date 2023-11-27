@@ -1,0 +1,30 @@
+<div class="h1Title">
+  <h1>Recommended Movies {{mostCommonLanguage}}</h1>
+</div>
+<div class="example-card-grid">
+  <mat-card class="example-card" *ngFor="let x of recomendedList | paginate: { itemsPerPage: count, currentPage: p }">
+    <img mat-card-image src="https://image.tmdb.org/t/p/w185/{{x.poster_path}}" (click)="getVideo(x)" matTooltip="To Watch Trailer Click On Image">
+    <mat-card-footer>
+      <h4 class="h4c">{{x.title || x.name}}</h4>
+      <div style="display: flex;">
+        <mat-icon class="icon-border" (click)="AddTofavFavouriteList(x)" matTooltip="Click To Add To Your FavList">favorite</mat-icon>
+        <button style="margin-left: 10px; color: black;" mat-button class="btn bg-transparent" (click)="openDialog(x)" matTooltip="Click To Get Movie Info">MovieInfo</button>
+        <p [ngClass]="{
+          'vote-high': x.vote_average > 7,
+          'vote-medium': x.vote_average >= 5 && x.vote_average <= 7,
+          'vote-low': x.vote_average < 5
+        }">{{x.vote_average}}</p>
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+<div class="gray-box">
+  <div id="mySidenav" class="sidenav"style="background: #000;color:white">
+    <a id="top" (click)="navigateTOfavMovies()">Favourite Movies</a>
+  </div>
+</div><hr>
+<pagination-controls (pageChange)="p = $event" ></pagination-controls>
+
+
+

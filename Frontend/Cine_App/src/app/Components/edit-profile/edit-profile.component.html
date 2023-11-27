@@ -1,0 +1,59 @@
+<div class="bgImage">
+  
+<mat-card class="form ">
+  <mat-card-title style="color: whitesmoke;">Add/Edit Form</mat-card-title>
+  <form [formGroup]="editProfile" action="">
+    <mat-form-field appearance="fill">
+        <mat-label>FirstName</mat-label>
+        <input matInput type="userName" formControlName="firstName">
+        
+        <mat-hint *ngIf="!firstName?.valid&& firstName?.dirty">Invalid firstName</mat-hint>
+        <mat-error *ngIf="firstName?.errors?.['required']">firstName is Required</mat-error>
+        <mat-error *ngIf="firstName?.errors?.['minlength']">firstName  Should be minimum 3</mat-error>
+        <mat-error class="red" *ngIf="firstName?.errors?.['pattern']">No special characters and numbers</mat-error>
+      </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>LastName</mat-label>
+        <input  matInput type="text" formControlName="lastName">
+        <!-- <mat-hint *ngIf="!lastName?.valid&& lastName?.dirty">Must Be 3-15 Letter</mat-hint> -->
+         <!-- <mat-hint *ngIf="!lastName?.valid&& lastName?.dirty">Invalid lastName</mat-hint> -->
+        <mat-error *ngIf="lastName?.errors?.['required']">lastName is Required</mat-error>
+        <mat-error *ngIf="lastName?.errors?.['minlength']">lastName minimum 3 characters</mat-error>
+        <mat-error class="red" *ngIf="lastName?.errors?.['pattern']">No special characters and numbers</mat-error>
+      </mat-form-field>&nbsp;<br>
+   <mat-form-field   appearance="fill" >
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="mobileNo">
+            <mat-hint *ngIf="!mobileNo?.valid&& mobileNo?.dirty">Invalid phoneNumber</mat-hint>
+            <mat-error class="red" *ngIf="mobileNo?.errors?.['required']"> Mobile Number is Required </mat-error>
+        <mat-error class="red" *ngIf="mobileNo?.errors?.['pattern']">Mobile No contains 10 digits starting with 7/8/9</mat-error>
+        </mat-form-field><br>
+    <!-- <mat-form-field appearance="fill">
+    <mat-label>Age</mat-label>
+    <input matInput type="number" min="13" max="100" formControlName="age">
+   <mat-error *ngIf="age?.errors?.['required']">Age is Required and should be between 13 to 100</mat-error>
+  
+  </mat-form-field>&nbsp;<br> -->
+  
+    <mat-form-field  appearance="fill">
+      <mat-label>Gender</mat-label>
+      <mat-select  formControlName="gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">FeMale</mat-option>
+        <mat-option value="Others">Others</mat-option>
+      </mat-select>
+    </mat-form-field>&nbsp;<br>
+    <mat-form-field  appearance="fill">
+      <mat-label> Address </mat-label>
+      <input  matInput type="textarea" formControlName="address">
+      <mat-error *ngIf="address?.errors?.['required']">address is Required</mat-error>
+      <mat-error *ngIf="address?.errors?.['minlength']">address minimum 5 characters</mat-error>
+      </mat-form-field><br>
+    
+    <div class="buttonalign">
+      <button mat-raised-button  [disabled]="editProfile.invalid"*ngIf="disableAdd" type="submit" color="primary"value="addForm"  (click)="AddForm()" mat-dailog-close >Add Details</button><br>
+    <button mat-raised-button [disabled]="editProfile.invalid"*ngIf="disableUpdate" type="submit" color="accent"value="Update"  (click)="UpdateForm()" mat-dailog-close >UpdateForm</button><br>
+    </div>
+  </form>
+</mat-card>
+</div><hr>

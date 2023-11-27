@@ -1,0 +1,66 @@
+.container {
+    background-color: black;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .h1 {
+    font-size: 32px;
+    color:red;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  strong {
+    font-weight: bold;
+}
+.instagram-icon {
+    font-size: 24px;
+    color: #C13584;
+  }
+  .facebook-icon {
+    font-size: 24px;
+    color: #3b5998;
+  }
+  .linkedin-icon {
+    font-size: 24px;
+    color: #0077B5;
+  }
+  .github-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  .twitter-icon {
+    font-size: 24px;
+    color: #1DA1F2;
+  }
+  .youtube-icon {
+    font-size: 24px;
+    color: #FF0000;
+  }
+  .whatsapp-icon {
+    font-size: 24px;
+    color: #25D366;
+  }
+  .gmail-icon {
+    font-size: 24px;
+    color: #D44638;
+  }
+  .p{
+    display: flex;
+    
+  }
+  

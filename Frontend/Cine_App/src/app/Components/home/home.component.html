@@ -1,0 +1,15 @@
+ <div class="banner" [ngStyle]="{ 'background-image': 'url(' + currentImage + ')' }">
+    <!-- <div class="banner-image"></div> -->
+    <div class="banner-content">
+      <h1 class="banner-title">Discover New Shows</h1>
+      <p class="banner-description">Stream the latest Movies and greatest TV shows on CINΣ_PLUS.</p>
+      <a  class="banner-button"(click)= "signUp()" *ngIf="!isLoggedIn">Sign up to join CINΣ_PLUS </a>
+      <button class="watchlist-button" matTooltip="WatchList"*ngIf="isLoggedIn"   (click)="addToWatchlist()">AddtoWatchlist</button>
+    </div>
+  </div><hr>
+
+
+  
+  
+  
+  

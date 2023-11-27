@@ -1,0 +1,128 @@
+
+
+
+
+<div class="container">
+  <header class="header">
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <button mat-button [matMenuTriggerFor]="Tvshow" style="color: gray">TVshows</button>
+        </li>
+        <li class="header-nav-item">
+          <button mat-button [matMenuTriggerFor]="Trending" style="color: gray">Trending</button>
+        </li>
+        <li class="header-nav-item">
+          <button mat-button (click)="ShowKids()" style="color: gray">Kids</button>
+        </li>
+        <li class="header-nav-item">
+          <button mat-button [matMenuTriggerFor]="Language" style="color: gray">Movies</button>
+        </li>
+      </ul>
+    </nav>
+    
+     
+   
+    <div class="header-search">
+      <input type="text" placeholder="search" [(ngModel)]="movieName" matInput>
+      <button><mat-icon style="color: white" (click)="searchMovie()">search</mat-icon></button>
+    </div>
+  </header>
+  
+
+    <div class="banner" style="background-color:  black;">
+      <mat-icon class="button" matTooltip="previous" (click)="prevImage()">navigate_before</mat-icon>
+      <img [src]="currentImage" alt="Banner Image">
+      <mat-icon class="button" matTooltip="next" (click)="nextImage()">navigate_next</mat-icon>
+    </div>
+
+  <div class="div1">
+    <h2>You can watch the latest movies and greatest TV shows on Cine_Plus.</h2>
+  </div>
+
+  <div class="example-card-grid">
+
+    <mat-card class="example-card" *ngFor="let x of bannerApiData | paginate: { itemsPerPage: count, currentPage: p }">
+     
+      <img mat-card-image src="https://image.tmdb.org/t/p/w185/{{x.poster_path}}"(click)="getVideo(x)" matTooltip="To Watch Trailer Click On Image" >
+      <mat-card-footer>
+        <h4 class="h4c">{{x.title || x.name}}</h4>
+        <div style="display: flex;">
+          <mat-icon  class="icon-border"(click)="addToFavListOfUser(x)"
+          matTooltip="Add to Favourite"
+         >favorite</mat-icon>
+       <button style="margin-left: 10px;color:gray"mat-button  class="btn bg-transparent" (click)="openDialog(x)" matTooltip="Click To Get Movie Info">MovieInfo</button>
+        <p [ngClass]="{
+          'vote-high': x.vote_average > 7,
+          'vote-medium': x.vote_average >= 5 && x.vote_average <= 7,
+          'vote-low': x.vote_average < 5
+        }">{{x.vote_average}} </p>
+        </div>
+        
+       
+      </mat-card-footer>
+    </mat-card>
+   
+   </div><hr>
+    <pagination-controls (pageChange)="p = $event" style="margin-left: 600px ;"></pagination-controls>
+  
+
+  <div class="gray-box">
+    <div id="mySidenav" class="sidenav">
+      <a id="trd" style="  color:  black;"  [routerLink]="['/favmovies']" routerLinkActive="router-link-active"  >Favourite Movies</a>
+      <a id="top" style="  color:  black;" (click)="recmendedMovies()" routerLinkActive="router-link-active"  >Recommended Movies</a>
+    </div> 
+     </div>
+</div>
+
+
+
+<mat-menu #Tvshow="matMenu">
+  <button mat-menu-item (click)="showEnglishTV()">English</button>
+  <button mat-menu-item (click)="showHindiTV()">Hindi</button>
+    </mat-menu>
+
+    <mat-menu #Trending="matMenu"  >
+      <button mat-menu-item  (click)="showTrenDAY()">Today</button>
+      <button mat-menu-item (click)="showTrendWeek()">week</button>
+        </mat-menu>
+        <mat-menu #kannada="matMenu">
+          <button mat-menu-item (click)="showKannadaMovies()">Popular</button>
+          <button mat-menu-item (click)="showKannadaUpcommingMovies()">Recent</button>
+        </mat-menu>
+
+        <mat-menu #tamil="matMenu">
+          <button mat-menu-item (click)="showTamilMovies()">Popular</button>
+          <button mat-menu-item (click)="showTamilUpcommingMovies()">Recent</button>
+        </mat-menu>
+
+        <mat-menu #english="matMenu">
+          <button mat-menu-item (click)="showEnglishMovies()">Popular</button>
+          <button mat-menu-item (click)="showEnglishUpCommingMovies()">Recent</button>
+        </mat-menu>
+    
+    
+        <mat-menu #hindi="matMenu">
+          <button mat-menu-item (click)="showHindiMovies()">Popular</button>
+          <button mat-menu-item (click)="showHindiUpCommingMovies()">Recent</button>
+        </mat-menu>
+    
+        <mat-menu #malayalam="matMenu">
+          <button mat-menu-item (click)="showMalayalamMovies()">Popular</button>
+          <button mat-menu-item (click)="showMalayalamUpcommingMovies()">Recent</button>
+        </mat-menu>
+    
+        <mat-menu #telugu="matMenu">
+          <button mat-menu-item (click)="showTeluguMovies()">Popular</button>
+          <button mat-menu-item (click)="showTeluguUpcommingMovies()">Recent</button>
+        </mat-menu>
+
+
+        <mat-menu #Language="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="english" >English</button>
+          <button mat-menu-item [matMenuTriggerFor]="hindi">Hindi</button>
+          <button mat-menu-item [matMenuTriggerFor]="telugu">Telugu</button>
+          <button mat-menu-item [matMenuTriggerFor]="tamil">Tamil</button>
+          <button mat-menu-item [matMenuTriggerFor]="kannada">Kannada</button>
+          <button mat-menu-item [matMenuTriggerFor]="malayalam">Malayalam</button>
+         </mat-menu>

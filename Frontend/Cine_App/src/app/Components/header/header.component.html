@@ -1,0 +1,56 @@
+
+   <!-- CINΣMΛ PLUS -->
+<nav class="fixed-nav">
+  <mat-toolbar class="mat-toolbar">
+    <div class="logo-container">
+      <img class="popcorn" src="../../../assets/moviebaground.jpeg" alt="img" routerLink="" routerLinkActive="Active" title="Click to Go Home">
+      <span class="app-name" >CINΣ_PLUS</span>
+    </div>
+ 
+    <div class="search-container">
+      
+       
+       
+          <div class="search"> 
+            <button mat-button style="color: azure;"*ngIf="isLoggedIn"  [routerLink]="['/home']" routerLinkActive="router-link-active" >
+              <mat-icon>home</mat-icon><span>Home</span>
+              </button>
+              <button mat-button style="color: azure;" *ngIf="isLoggedIn"[routerLink]="['/dashboard']" routerLinkActive="router-link-active"  >
+                <mat-icon>dashboard</mat-icon> <span>DashBoard</span>
+                </button>
+          </div>
+              
+    
+    </div>
+
+    <div class="button-container">
+      
+
+      <button mat-button style="color: azure;" (click)="signIn()" *ngIf="!isLoggedIn" >
+        <mat-icon>person</mat-icon><span>LOGIN</span>
+      </button>
+      <div *ngIf="imageSrc; else uploadImages" >
+        <img mat-card-avatar *ngIf="isLoggedIn" [src]="imageSrc" class="example-header-image" alt="Profile Picture">
+      </div>
+      <ng-template #uploadImages>
+        <img mat-card-avatar *ngIf="isLoggedIn" src="../../../assets/NoImg.png" class="example-header-image" alt="Profile Picture">
+       </ng-template>
+      <button mat-button [matMenuTriggerFor]="signOut1" matTooltip="Click Here!" *ngIf="isLoggedIn">
+        <span>WELCOME {{userName}}</span>
+      </button>
+
+      <mat-menu #signOut1="matMenu">
+        <button mat-menu-item (click)="signOut()"><mat-icon style="color:black">exit_to_app</mat-icon>Log Out</button>
+        <button mat-menu-item (click)="viewProfile()" ><mat-icon style="color:black">person</mat-icon>View Profile</button>
+        <button mat-menu-item (click)="editProfile()"   ><mat-icon style="color:black">edit</mat-icon>Edit Profile</button>
+        <button mat-menu-item (click)="UpdatedPassword()"   ><mat-icon style="color:black">update</mat-icon>Updatepassword</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+ 
+</nav>
+
+
+  
+
+

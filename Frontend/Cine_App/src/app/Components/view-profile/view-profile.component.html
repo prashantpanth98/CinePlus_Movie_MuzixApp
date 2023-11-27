@@ -1,0 +1,127 @@
+
+
+
+   <!-- <mat-card class="example-card">
+    <mat-card-header>
+      <div *ngIf="imageSrc; else uploadImages">
+        <img mat-card-avatar [src]="imageSrc" class="example-header-image" alt="Profile Picture">
+      </div>
+      <ng-template #uploadImages>
+        <img mat-card-avatar src="../../../assets/NoImg.png" class="example-header-image" alt="Profile Picture">
+       </ng-template>
+     <button mat-icon-button style="color: whitesmoke;" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      
+    </mat-card-header>
+    <div >
+      <input  type="file"  #fileInput style="margin-left: 100px;color: whitesmoke;"><br>
+    <button mat-button class="profilebutton"style="color: whitesmoke;" matTooltip="Click to Add Profile Pic" (click)="uploadImage(fileInput)">Add_ProfilePic</button>
+    </div>
+      
+    
+    <div class="divclass" >
+      <mat-card-title style="color: whitesmoke;">{{this.firstName}} {{this.lastName}}</mat-card-title>
+      <mat-card-subtitle style="margin-left: 50px;color: whitesmoke;">Age: {{this.age}}</mat-card-subtitle>
+      <mat-card-subtitle style="margin-left: 30px;color: whitesmoke;">Gender: {{this.gender}}</mat-card-subtitle>
+    </div>
+    
+    <mat-card-content>
+      <p style="color: whitesmoke;">
+      <strong> Address:</strong> <br> {{this.address}}
+      </p>
+      <p style="margin-left:15px; color: whitesmoke;"><strong >Contacts:</strong>
+        <br>{{this.mobileNo}}<br>
+        {{this.email}}</p> 
+    </mat-card-content >
+     
+   </mat-card><hr> -->
+   <div class="bgImage">
+     <mat-card class="examplecard">
+      <mat-card-title >Profile</mat-card-title>
+      <mat-card-header>
+        <div *ngIf="imageSrc; else uploadImages">
+          <img mat-card-avatar [src]="imageSrc" class="example-header-image" alt="Profile Picture">
+        </div>
+        <ng-template #uploadImages>
+          <img mat-card-avatar src="../../../assets/NoImg.png" class="example-header-image" alt="Profile Picture">
+         </ng-template>
+       <button mat-icon-button style="color: whitesmoke;" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      
+      </mat-card-header>
+      <div class="AddButtons">
+        <input  type="file"  #fileInput><br>
+       <button mat-button style="background-color: rgb(190, 228, 22);" matTooltip="Click to Add Profile Pic" (click)="uploadImage(fileInput)">
+        Add_ProfilePic</button>
+      </div>
+      <mat-card-content>
+        <p style="color: whitesmoke;">
+          <strong> Name:</strong>   {{this.firstName}}  {{lastName}}.
+          </p>
+          <p style="color: whitesmoke;">
+            <strong> DOB:</strong>   {{this.age}} .
+            </p>
+            <p style="color: whitesmoke;">
+              <strong> Gender:</strong>   {{this.gender}}. 
+              </p>
+              <p style="color: whitesmoke;">
+                <strong> ContactNo:</strong>   {{this.mobileNo}}. 
+                </p>
+                <p style="color: whitesmoke;">
+                  <strong> Email:</strong>   {{this.email}}.
+                  </p>
+        <p style="color: whitesmoke;">
+          <strong> Address:</strong> <br> {{this.address}}.
+          </p>
+
+      </mat-card-content>
+
+     </mat-card>
+   </div><hr>
+  
+  
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="uploadImage(fileInput)">
+      <mat-icon>update</mat-icon>UpdateImage</button>
+    <button mat-menu-item (click)="deletePhoto()">
+      <mat-icon >delete</mat-icon>
+      <span>DeleteImage</span>
+    </button>
+  </mat-menu>
+

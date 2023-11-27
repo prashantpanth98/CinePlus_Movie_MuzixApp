@@ -1,0 +1,148 @@
+.matcard{
+    display: inline-block;
+ height: 600px;
+ width: 400px;
+ margin: 30px;
+ margin-left: 30%;
+ background: transparent;
+ box-shadow: 0 0 10px rgb(239, 237, 237);
+ border-radius: 10px;
+
+ 
+}
+
+.bgImage{
+ background-image: url("../../../assets/bgImage.webp");
+}
+.matcard mat-card-title{
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 20px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+.matcard mat-card-content{
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.width1{
+    width: 90%;   
+}
+.width2{
+  width: 90%; 
+  margin-top: 40px;  
+}
+.button{
+   margin-left: 40%;
+    width: 40%;
+    margin-top: 10%;
+}
+.span{
+    
+    font-size: larger;
+    font-weight: bolder;
+   
+    display: block;
+    text-align: center;
+    color: rgb(78, 157, 236);
+}
+@media (max-width: 486px) {
+    .matcard{
+        display: inline-block;
+     height: 350px;
+     width: 250px;
+     margin: 30px;
+     margin-left: 10%;
+     background: transparent;
+     box-shadow: 0 0 10px rgb(239, 237, 237);
+     border-radius: 10px;
+     
+    }
+    .matcard mat-card-content{
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .button{
+        margin-left: 40%;
+         width: 40%;
+         margin-top: 20px;
+     }
+     .span{
+        margin-top:10%;
+        font-size: larger;
+        font-weight: bolder;
+       
+        display: block;
+        text-align: center;
+        color: rgb(78, 157, 236);
+    }
+}
+@media (min-width: 486px) and (max-width: 789px){
+    .matcard{
+        display: inline-block;
+     height: 350px;
+     width: 250px;
+     margin: 30px;
+     margin-left: 10%;
+     background: transparent;
+     box-shadow: 0 0 10px rgb(239, 237, 237);
+     border-radius: 10px;
+     
+    }
+    .matcard mat-card-content{
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .button{
+        margin-left: 40%;
+         width: 40%;
+         margin-top: 20px;
+     }
+     .span{
+        margin-top:10%;
+        font-size: larger;
+        font-weight: bolder;
+       
+        display: block;
+        text-align: center;
+        color: rgb(78, 157, 236);
+    }
+
+}
+@media (min-width: 789px) and (max-width: 1024px){
+    .matcard{
+        display: inline-block;
+     height: 450px;
+     width: 300px;
+     margin: 30px;
+     margin-left: 20%;
+     background: transparent;
+     box-shadow: 0 0 10px rgb(239, 237, 237);
+     border-radius: 10px;
+     
+    }
+    .matcard mat-card-content{
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .button{
+        margin-left: 40%;
+         width: 40%;
+         margin-top: 20px;
+     }
+     .span{
+        margin-top:10%;
+        font-size: larger;
+        font-weight: bolder;
+       
+        display: block;
+        text-align: center;
+        color: rgb(78, 157, 236);
+    }
+  .width{width: 80%;}
+}

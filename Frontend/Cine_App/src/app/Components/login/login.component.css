@@ -1,0 +1,155 @@
+.captcha-container {
+  display: inline-block;
+  width: 360px;
+  height: 650px;
+  margin: 20px;
+  margin-left: 30%;
+  background: transparent;
+  box-shadow: 0 0 10px rgb(239, 237, 237);
+  border-radius: 10px;
+}
+
+.bgImage{
+  background-image: url("../../../assets/bgImage.webp");
+}
+.captcha-container mat-card-title{
+  color: rgb(244, 244, 244);
+  text-align: center;
+  margin-top: 30px;
+  font-size: xx-large;
+  font-weight: bolder;
+
+  
+}
+.buttons{
+  background: rgb(38, 116, 152);
+  margin-left: 20px;
+}
+.captcha-characters {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+  color:whitesmoke;  margin-left: 50px; font-size: xx-large;
+}
+
+.forgotPassword{
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 50%;
+  color: whitesmoke;
+
+}
+
+form {
+  margin-left: 30px;
+}
+form mat-form-field{
+ width: 80%;margin-top: 20px;
+ margin-left: 20px;
+}
+.matcard {
+  width: 360px;
+  height: 500px;
+ 
+  margin-left: 30%;
+  margin-top: -50%;
+ 
+}
+.matcard mat-form-field{
+ 
+  width: 80%;margin-top: 20px;
+ margin-left: 40px;
+}
+.matcard mat-card-header{
+ align-items: center;
+ font-size: xx-large;
+ font-weight: bolder;
+ 
+}
+.signIn{
+  
+  color: rgb(201, 87, 180);
+   margin-left: 50%;
+}
+@media (max-width: 486px) {
+  .captcha-container {
+    display: inline-block;
+    width: 300px;
+    height: 650px;
+    margin: 5px;    margin-left: 4%;
+   
+  }
+ 
+  form mat-form-field{
+    width: 60%;margin-top: 20px;
+   
+   }
+   .buttons{
+    background: rgb(38, 116, 152);
+    margin-left: -30px;
+  }
+  .matcard{
+    width:  270px;;
+    height: 500px;
+  
+    margin-left: 8%;
+    margin-top: -100%;
+   
+  }
+  .matcard mat-card-header{
+    align-items: center;
+    font-size: small;
+    font-weight: bolder;
+    
+   }
+ 
+}
+@media (min-width: 586px) and(max-width: 800px) {
+  .captcha-container {
+    display: inline-block;
+    width: 300px;
+    height: 650px;
+    margin: 10px;
+   
+  }
+  .matcard{
+    width:  300px;;
+    height: 500px;
+   
+    margin-left: 20%;
+    margin-top: -60%;
+   
+  }
+ 
+  .matcard mat-card-header{
+    align-items: center;
+    font-size: large;
+    font-weight: bolder;
+    
+   }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .captcha-container {
+    display: inline-block;
+    width: 360px;
+    height: 650px;
+    margin: 20px;
+    margin-left: 20%;
+   
+  }
+  .matcard mat-card-header{
+    align-items: center;
+    font-size: larger;
+    font-weight: bolder;
+    
+   }
+   .matcard{
+    width:  360px;;
+    height: 500px;
+    margin-left: 20%;
+    margin-top: -60%;
+   
+  }
+}
